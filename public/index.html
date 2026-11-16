@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPSTEIN FOUNDATION — For Children | Official Website &amp; Donation Portal</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-ivory: #FAF8F5;
+      --bg-sand: #F2ECE1;
+      --navy-deep: #1B2A41;
+      --navy-ink: #142033;
+      --gold-warm: #D4A359;
+      --slate-muted: #526071;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-ivory);
+      color: var(--navy-ink);
+    }
+    .font-serif-display {
+      font-family: 'Playfair Display', Georgia, Cambria, serif;
+    }
+    .hero-fade {
+      transition: opacity 0.45s ease-in-out;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#FAF8F5] text-[#142033] antialiased selection:bg-[#D4A359]/30">
+
+  <!-- Top Founder Preview & Builder Bar -->
+  <div class="bg-[#142033] text-white text-xs border-b border-white/10 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D4A359]/20 text-[#D4A359] font-medium border border-[#D4A359]/40">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#D4A359]"></span>
+          epsteinfoundation.ngo.ind.in
+        </span>
+        <span class="hidden md:inline text-slate-300">Proposal &amp; Incorporation-Planning Stage</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <!-- Logo Switcher -->
+        <div class="inline-flex items-center bg-white/10 rounded-lg p-0.5 border border-white/10">
+          <button type="button" id="btn-logo-crest" onclick="switchLogo('crest')" class="px-2.5 py-1 rounded-md text-xs font-medium bg-[#D4A359] text-[#142033] transition">
+            Logo 1: Book &amp; Hands
+          </button>
+          <button type="button" id="btn-logo-seal" onclick="switchLogo('seal')" class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-200 hover:text-white transition">
+            Logo 2: Star Seal
+          </button>
+        </div>
+
+        <!-- View Mode Switcher -->
+        <div class="inline-flex items-center bg-white/10 rounded-lg p-0.5 border border-white/10">
+          <button type="button" id="btn-mode-site" onclick="switchViewMode('site')" class="px-2.5 py-1 rounded-md text-xs font-medium bg-white text-[#142033] transition">
+            Public Website
+          </button>
+          <button type="button" id="btn-mode-donate" onclick="switchViewMode('donate')" class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-200 hover:text-white transition">
+            Donation Page
+          </button>
+          <button type="button" id="btn-mode-copykit" onclick="switchViewMode('copykit')" class="px-2.5 py-1 rounded-md text-xs font-medium text-slate-200 hover:text-white transition">
+            ngo.ind.in Kit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Website Header / Navbar -->
+  <header class="bg-[#FAF8F5]/95 backdrop-blur border-b border-[#E5DEC9] sticky top-[41px] z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+      <a href="#hero-section" onclick="switchViewMode('site')" class="flex items-center gap-3.5 group">
+        <img id="header-logo-img" src="assets/web_logo_crest.jpg" alt="Epstein Foundation Logo" class="w-12 h-12 rounded-xl object-cover border border-[#D4A359]/40 shadow-sm" />
+        <div>
+          <div class="font-serif-display font-bold text-lg sm:text-xl tracking-wide text-[#1B2A41] leading-tight">
+            EPSTEIN FOUNDATION
+          </div>
+          <div class="text-xs italic font-serif-display text-[#526071]">
+            For Children.
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-[#142033]">
+        <a href="#vision-mission" onclick="switchViewMode('site')" class="hover:text-[#1B2A41] transition">Vision &amp; Mission</a>
+        <a href="#key-areas" onclick="switchViewMode('site')" class="hover:text-[#1B2A41] transition">Our Key Areas</a>
+        <a href="#governance" onclick="switchViewMode('site')" class="hover:text-[#1B2A41] transition">Governance &amp; Approach</a>
+        <a href="#roadmap" onclick="switchViewMode('site')" class="hover:text-[#1B2A41] transition">Roadmap</a>
+        <a href="#gallery" onclick="switchViewMode('site')" class="hover:text-[#1B2A41] transition">Field Focus</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button type="button" onclick="switchViewMode('donate')" class="px-4 py-2 rounded-lg bg-[#D4A359] hover:bg-[#c39247] text-[#142033] text-xs sm:text-sm font-semibold transition shadow-sm">
+          Donate
+        </button>
+        <a href="#contact-section" onclick="switchViewMode('site')" class="hidden sm:inline-block px-4 py-2 rounded-lg bg-[#1B2A41] hover:bg-[#142033] text-white text-xs sm:text-sm font-medium transition shadow-sm">
+          Connect
+        </a>
+        <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg border border-[#E5DEC9] text-[#1B2A41] hover:bg-[#F2ECE1]" aria-label="Toggle Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Collapsible Menu -->
+    <div id="mobile-menu-panel" class="hidden lg:hidden bg-[#F2ECE1] border-t border-[#E5DEC9] px-4 py-3 space-y-2 text-sm">
+      <a href="#vision-mission" onclick="switchViewMode('site'); toggleMobileMenu()" class="block py-1.5 font-medium text-[#1B2A41]">Vision &amp; Mission</a>
+      <a href="#key-areas" onclick="switchViewMode('site'); toggleMobileMenu()" class="block py-1.5 font-medium text-[#1B2A41]">Our Key Areas</a>
+      <a href="#governance" onclick="switchViewMode('site'); toggleMobileMenu()" class="block py-1.5 font-medium text-[#1B2A41]">Governance &amp; Approach</a>
+      <a href="#roadmap" onclick="switchViewMode('site'); toggleMobileMenu()" class="block py-1.5 font-medium text-[#1B2A41]">Roadmap</a>
+      <a href="#gallery" onclick="switchViewMode('site'); toggleMobileMenu()" class="block py-1.5 font-medium text-[#1B2A41]">Field Focus</a>
+      <button type="button" onclick="switchViewMode('donate'); toggleMobileMenu()" class="block w-full text-left py-1.5 font-semibold text-[#1B2A41]">Donate / Support</button>
+      <a href="#contact-section" onclick="switchViewMode('site'); toggleMobileMenu()" class="block py-1.5 font-semibold text-[#1B2A41]">Connect With Us</a>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 1: LIVE PUBLIC WEBSITE PREVIEW                                   -->
+  <!-- ===================================================================== -->
+  <div id="view-public-site" class="flex-1 flex flex-col">
+
+    <!-- HERO SLIDER SECTION -->
+    <section id="hero-section" class="relative overflow-hidden border-b border-[#E5DEC9] bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:py-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <!-- Left Column: Hero Copy -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2ECE1] border border-[#D4A359]/50 text-xs font-semibold tracking-wider uppercase text-[#1B2A41]">
+            <span class="w-2 h-2 rounded-full bg-[#D4A359]"></span>
+            <span id="hero-kicker">INDEPENDENT HUMANITARIAN INITIATIVE · BIHAR, INDIA</span>
+          </div>
+
+          <div class="w-16 h-1 bg-[#D4A359]"></div>
+
+          <h1 id="hero-title" class="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1B2A41] leading-tight">
+            EPSTEIN FOUNDATION — <span class="italic font-normal text-[#1B2A41]">For Children.</span>
+          </h1>
+
+          <p id="hero-subtitle" class="text-base sm:text-lg text-[#142033] leading-relaxed max-w-2xl">
+            An independent humanitarian foundation focused on children's welfare, dignity and opportunities—beginning with small, meaningful programmes in Bihar and expanding progressively.
+          </p>
+
+          <!-- Proposal Stage Transparency Note -->
+          <div class="p-4 rounded-xl bg-[#F2ECE1] border-l-4 border-[#1B2A41] text-xs sm:text-sm text-[#526071] leading-relaxed">
+            <strong class="text-[#1B2A41] font-semibold">Foundational Stage Notice:</strong>
+            The Foundation is currently at the proposal and Section 8 incorporation-planning stage in Patna, Bihar, and is not yet registered or accepting public donations.
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <button type="button" onclick="switchViewMode('donate')" class="px-5 py-2.5 rounded-lg bg-[#D4A359] hover:bg-[#c39247] text-[#142033] text-sm font-semibold transition shadow-sm">
+              Support Our Mission
+            </button>
+            <a href="#key-areas" class="px-5 py-2.5 rounded-lg bg-[#1B2A41] hover:bg-[#142033] text-white text-sm font-medium transition shadow-sm">
+              Explore Our 6 Key Areas
+            </a>
+            <a href="#roadmap" class="px-5 py-2.5 rounded-lg bg-[#F2ECE1] hover:bg-[#E5DEC9] text-[#1B2A41] text-sm font-medium transition border border-[#D4A359]/40">
+              View Roadmap
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Documentary Photo Carousel -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-[#D4A359]/40 bg-[#1B2A41]">
+            <img id="hero-slide-img" src="assets/web_hero_classroom.jpg" alt="Children in rural Bihar classroom" class="w-full h-72 sm:h-80 object-cover hero-fade" />
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#142033]/95 via-[#142033]/60 to-transparent p-4 text-white">
+              <div id="hero-slide-tag" class="text-[11px] uppercase tracking-widest text-[#D4A359] font-semibold">
+                Pillar 01 · Education &amp; Scholarships
+              </div>
+              <div id="hero-slide-caption" class="text-sm font-medium mt-0.5">
+                Supporting classroom access, learning materials, and foundational schooling in Bihar.
+              </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button type="button" onclick="prevHeroSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#142033]/75 hover:bg-[#142033] text-white flex items-center justify-center transition" aria-label="Previous slide">
+              &#8592;
+            </button>
+            <button type="button" onclick="nextHeroSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#142033]/75 hover:bg-[#142033] text-white flex items-center justify-center transition" aria-label="Next slide">
+              &#8594;
+            </button>
+          </div>
+
+          <!-- Slide Dots -->
+          <div class="flex items-center justify-between mt-3 px-1">
+            <div class="flex items-center gap-2" id="hero-dots-container">
+              <button type="button" onclick="setHeroSlide(0)" class="w-6 h-2 rounded-full bg-[#1B2A41] transition" aria-label="Slide 1"></button>
+              <button type="button" onclick="setHeroSlide(1)" class="w-2.5 h-2 rounded-full bg-[#1B2A41]/30 transition" aria-label="Slide 2"></button>
+              <button type="button" onclick="setHeroSlide(2)" class="w-2.5 h-2 rounded-full bg-[#1B2A41]/30 transition" aria-label="Slide 3"></button>
+            </div>
+            <span id="hero-slide-counter" class="text-xs text-[#526071] font-medium">Slide 1 of 3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION SECTION -->
+    <section id="vision-mission" class="py-12 lg:py-16 border-b border-[#E5DEC9] bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+        <div class="text-center max-w-3xl mx-auto space-y-2">
+          <div class="text-xs font-semibold uppercase tracking-widest text-[#526071]">Foundational Mandate</div>
+          <h2 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41]">Our Vision &amp; Our Mission</h2>
+          <p class="text-sm text-[#526071]">Practical, compassionate action built on dignity, transparency, and community trust.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Vision Card -->
+          <div class="rounded-2xl bg-[#1B2A41] text-white p-6 sm:p-8 flex flex-col justify-between shadow-sm border border-[#1B2A41]">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4A359] font-semibold">
+                <span class="w-2 h-2 rounded-full bg-[#D4A359]"></span>
+                Our Vision
+              </div>
+              <blockquote class="font-serif-display italic text-lg sm:text-xl leading-relaxed border-l-4 border-[#D4A359] pl-4">
+                “A world where every child has access to education, healthcare, safety, dignity and opportunities to build a better future.”
+              </blockquote>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/15 text-xs text-slate-300">
+              Click any of the five core pillars below to inspect how our vision translates into child welfare priorities.
+            </div>
+          </div>
+
+          <!-- Mission Card -->
+          <div class="rounded-2xl bg-[#F2ECE1] text-[#142033] p-6 sm:p-8 flex flex-col justify-between border border-[#E5DEC9]">
+            <div class="space-y-4">
+              <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#1B2A41] font-semibold">
+                <span class="w-2 h-2 rounded-full bg-[#1B2A41]"></span>
+                Our Mission
+              </div>
+              <blockquote class="font-serif-display italic text-lg sm:text-xl text-[#1B2A41] leading-relaxed border-l-4 border-[#1B2A41] pl-4">
+                “We aim to support children and vulnerable communities through practical humanitarian initiatives, beginning with small, meaningful programmes in Bihar and expanding progressively.”
+              </blockquote>
+            </div>
+            <div class="grid grid-cols-3 gap-2 pt-6 mt-6 border-t border-[#D4A359]/30 text-xs">
+              <div class="p-2.5 rounded-lg bg-[#FAF8F5]">
+                <div class="font-semibold text-[#1B2A41]">1. Practical Aid</div>
+                <div class="text-[#526071] mt-0.5">Direct ground support</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#FAF8F5]">
+                <div class="font-semibold text-[#1B2A41]">2. Bihar First</div>
+                <div class="text-[#526071] mt-0.5">Focused local start</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-[#FAF8F5]">
+                <div class="font-semibold text-[#1B2A41]">3. Phased Scale</div>
+                <div class="text-[#526071] mt-0.5">Earned expansion</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 5 Vision Pillars Selector -->
+        <div class="rounded-2xl bg-[#F2ECE1] p-5 sm:p-6 border border-[#E5DEC9]">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">Interactive Vision Pillars — Select a Pillar:</span>
+            <span id="pillar-active-badge" class="text-xs font-medium text-[#526071]">Showing: Education</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" id="vision-pillar-buttons"></div>
+          <div id="vision-pillar-detail" class="mt-4 p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9] flex flex-col sm:flex-row sm:items-center justify-between gap-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR KEY AREAS (6 DOMAINS) -->
+    <section id="key-areas" class="py-12 lg:py-16 border-b border-[#E5DEC9] bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-[#526071]">Programme Domains</div>
+            <h2 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41] mt-1">Our Key Areas</h2>
+            <p class="text-sm text-[#526071] mt-1">Six core humanitarian pillars supporting children and vulnerable families.</p>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap gap-1.5" id="area-filter-bar">
+            <button type="button" onclick="filterKeyAreas('all')" data-filter="all" class="area-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#1B2A41] text-white transition">
+              All 6 Areas
+            </button>
+            <button type="button" onclick="filterKeyAreas('learning')" data-filter="learning" class="area-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#F2ECE1] text-[#1B2A41] hover:bg-[#E5DEC9] transition">
+              Education &amp; Protection
+            </button>
+            <button type="button" onclick="filterKeyAreas('wellbeing')" data-filter="wellbeing" class="area-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#F2ECE1] text-[#1B2A41] hover:bg-[#E5DEC9] transition">
+              Food, Health &amp; Nutrition
+            </button>
+            <button type="button" onclick="filterKeyAreas('community')" data-filter="community" class="area-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#F2ECE1] text-[#1B2A41] hover:bg-[#E5DEC9] transition">
+              Community &amp; Relief
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 Cards Grid -->
+        <div id="key-areas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- ORGANISATION & GOVERNANCE + INITIAL APPROACH -->
+    <section id="governance" class="py-12 lg:py-16 border-b border-[#E5DEC9] bg-[#F2ECE1]/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-[#526071]">Structure &amp; Methodology</div>
+            <h2 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41] mt-1">Organisation, Governance &amp; Initial Approach</h2>
+          </div>
+
+          <!-- Section Tab Switcher -->
+          <div class="inline-flex rounded-xl bg-[#FAF8F5] p-1 border border-[#E5DEC9] self-start">
+            <button type="button" id="tab-btn-gov" onclick="switchGovTab('governance')" class="px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-[#1B2A41] text-white transition">
+              Organisation &amp; Governance
+            </button>
+            <button type="button" id="tab-btn-approach" onclick="switchGovTab('approach')" class="px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-[#1B2A41] hover:bg-[#F2ECE1] transition">
+              Our Initial Approach (6 Principles)
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 1: Governance -->
+        <div id="panel-governance" class="space-y-6">
+          <div class="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9] flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">Proposed Legal Entity:</span>
+              <span class="text-sm text-[#142033] ml-1 font-medium">Independent Section 8 Nonprofit Company in India</span>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-[#F2ECE1] text-[#1B2A41] text-xs font-semibold border border-[#D4A359]/50">
+              Proposal &amp; Incorporation-Planning Stage
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Role 1 -->
+            <div class="rounded-2xl bg-[#FAF8F5] p-6 border-t-4 border-[#1B2A41] shadow-sm flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="inline-block px-2.5 py-0.5 rounded-md bg-[#F2ECE1] text-[#526071] text-[11px] font-semibold uppercase tracking-wider">
+                  Proposed Initial Member
+                </span>
+                <h3 class="font-serif-display text-lg font-bold text-[#1B2A41]">Chairperson / Strategic Director</h3>
+                <p class="text-sm text-[#526071] leading-relaxed">
+                  Guides institutional vision, board governance, and long-term strategic alignment across all humanitarian initiatives.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-[#E5DEC9] text-xs text-[#526071] italic">
+                Individual name &amp; formal appointment to be finalised.
+              </div>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="rounded-2xl bg-[#FAF8F5] p-6 border-t-4 border-[#D4A359] shadow-sm flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="inline-block px-2.5 py-0.5 rounded-md bg-[#F2ECE1] text-[#526071] text-[11px] font-semibold uppercase tracking-wider">
+                  Proposed Initial Member
+                </span>
+                <h3 class="font-serif-display text-lg font-bold text-[#1B2A41]">Finance &amp; Compliance Director</h3>
+                <p class="text-sm text-[#526071] leading-relaxed">
+                  Oversees statutory Section 8 compliance, transparent donation and expenditure records, and audit readiness.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-[#E5DEC9] text-xs text-[#526071] italic">
+                Individual name &amp; formal appointment to be finalised.
+              </div>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="rounded-2xl bg-[#FAF8F5] p-6 border-t-4 border-[#1B2A41] shadow-sm flex flex-col justify-between">
+              <div class="space-y-3">
+                <span class="inline-block px-2.5 py-0.5 rounded-md bg-[#F2ECE1] text-[#526071] text-[11px] font-semibold uppercase tracking-wider">
+                  Proposed Initial Member
+                </span>
+                <h3 class="font-serif-display text-lg font-bold text-[#1B2A41]">Programmes &amp; Impact Director</h3>
+                <p class="text-sm text-[#526071] leading-relaxed">
+                  Leads field programme design in Bihar, volunteer and institutional coordination, and beneficiary outcome tracking.
+                </p>
+              </div>
+              <div class="mt-5 pt-3 border-t border-[#E5DEC9] text-xs text-[#526071] italic">
+                Individual name &amp; formal appointment to be finalised.
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-[#1B2A41] text-white p-5 border-l-4 border-[#D4A359] text-xs sm:text-sm leading-relaxed">
+            <strong class="text-[#D4A359]">Governance Note:</strong> All three founding directors are proposed to serve as the initial members of the Section 8 nonprofit company. Individual names and appointments are yet to be finalised; the Foundation remains completely independent and is not yet registered or operational.
+          </div>
+        </div>
+
+        <!-- Tab 2: Our Initial Approach -->
+        <div id="panel-approach" class="hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div class="lg:col-span-7 space-y-3" id="approach-list-container"></div>
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl overflow-hidden border border-[#E5DEC9] bg-[#FAF8F5] shadow-sm">
+                <img src="assets/web_community_aid.jpg" alt="Community volunteers organizing educational and food supplies" class="w-full h-64 object-cover" />
+                <div class="p-4 space-y-1">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">Grassroots Accountability</div>
+                  <p class="text-xs text-[#526071] leading-relaxed">
+                    Working alongside local volunteers and credible community institutions in Bihar while maintaining transparent records before scaling.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP SECTION (7 STAGES) -->
+    <section id="roadmap" class="py-12 lg:py-16 border-b border-[#E5DEC9] bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-[#526071]">Sequential Implementation</div>
+            <h2 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41] mt-1">Our 7-Stage Roadmap</h2>
+            <p class="text-sm text-[#526071] mt-1">Click any stage below to inspect its operational milestone and planning details.</p>
+          </div>
+          <span id="roadmap-selected-indicator" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#F2ECE1] text-[#1B2A41]">
+            Inspecting: Stage 01 of 07
+          </span>
+        </div>
+
+        <div id="roadmap-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+        <!-- Selected Stage Detail Inspector -->
+        <div id="roadmap-detail-box" class="rounded-2xl bg-[#F2ECE1] p-5 sm:p-6 border-l-4 border-[#1B2A41] flex flex-col sm:flex-row sm:items-center justify-between gap-4"></div>
+
+        <!-- Closing Quote Banner -->
+        <div class="rounded-2xl bg-[#1B2A41] text-white p-6 sm:p-8 text-center shadow-sm border-b-4 border-[#D4A359]">
+          <p class="font-serif-display italic text-lg sm:text-2xl text-white max-w-3xl mx-auto leading-relaxed">
+            “Every child deserves a chance. Our responsibility is to help make that chance real.”
+          </p>
+          <div class="mt-2 text-xs uppercase tracking-widest text-[#D4A359] font-semibold">
+            EPSTEIN FOUNDATION — For Children
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIELD FOCUS / VISUAL GALLERY -->
+    <section id="gallery" class="py-12 lg:py-16 border-b border-[#E5DEC9] bg-[#FAF8F5]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-widest text-[#526071]">Humanitarian Focus</div>
+          <h2 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41] mt-1">Children, Education &amp; Community Support</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl overflow-hidden bg-[#F2ECE1] border border-[#E5DEC9] flex flex-col">
+            <img src="assets/web_hero_classroom.jpg" alt="Classroom learning in Bihar" class="w-full h-52 object-cover" />
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-[#1B2A41]">Education &amp; Dignity</span>
+                <h3 class="font-serif-display font-bold text-base text-[#1B2A41] mt-1">Foundational Classroom Access</h3>
+                <p class="text-xs text-[#526071] mt-1 leading-relaxed">Supporting school attendance, notebooks, and learning resources for children in Bihar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden bg-[#F2ECE1] border border-[#E5DEC9] flex flex-col">
+            <img src="assets/web_reading_support.jpg" alt="Volunteer teacher helping children read" class="w-full h-52 object-cover" />
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-[#1B2A41]">Local Mentorship</span>
+                <h3 class="font-serif-display font-bold text-base text-[#1B2A41] mt-1">Community Learning Circles</h3>
+                <p class="text-xs text-[#526071] mt-1 leading-relaxed">Partnering with local volunteers and educators to nurture early literacy and curiosity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden bg-[#F2ECE1] border border-[#E5DEC9] flex flex-col">
+            <img src="assets/web_community_aid.jpg" alt="Community supply coordination" class="w-full h-52 object-cover" />
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-[#1B2A41]">Essential Needs &amp; Nutrition</span>
+                <h3 class="font-serif-display font-bold text-base text-[#1B2A41] mt-1">Transparent Grassroots Delivery</h3>
+                <p class="text-xs text-[#526071] mt-1 leading-relaxed">Organising essential food, nutrition, and educational kits with clear accountability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT, VOLUNTEER EXPRESSION & PATNA LOCATION -->
+    <section id="contact-section" class="py-12 lg:py-16 bg-[#F2ECE1]/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Info Column -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="text-xs font-semibold uppercase tracking-widest text-[#526071]">Get In Touch</div>
+          <h2 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41]">Connect With Epstein Foundation</h2>
+          <p class="text-sm text-[#526071] leading-relaxed">
+            We welcome expressions of interest from local volunteers, educators, and credible community institutions as we prepare our initial programmes in Bihar.
+          </p>
+
+          <div class="space-y-3 text-sm">
+            <div class="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9]">
+              <div class="text-xs font-semibold uppercase tracking-wider text-[#526071]">Official Web Portal</div>
+              <div class="font-semibold text-[#1B2A41] mt-0.5">https://epsteinfoundation.ngo.ind.in</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9]">
+              <div class="text-xs font-semibold uppercase tracking-wider text-[#526071]">Proposed Registered Office Location</div>
+              <div class="font-semibold text-[#1B2A41] mt-0.5">Patna, Bihar, India (Roadmap Stage 03)</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9]">
+              <div class="text-xs font-semibold uppercase tracking-wider text-[#526071]">Official Mailbox</div>
+              <div class="font-semibold text-[#1B2A41] mt-0.5">contact@epsteinfoundation.ngo.ind.in</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl bg-[#FAF8F5] p-6 sm:p-8 border border-[#E5DEC9] shadow-sm">
+            <h3 class="font-serif-display text-xl font-bold text-[#1B2A41]">Volunteer &amp; Community Inquiry Form</h3>
+            <p class="text-xs text-[#526071] mt-1">Inquiries are stored in the SQLite backend when hosted via Node.js/Express.</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="mt-5 space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="inp-name" class="block text-xs font-semibold text-[#1B2A41] mb-1">Full Name *</label>
+                  <input id="inp-name" type="text" required placeholder="e.g., Aarav Sharma" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]" />
+                </div>
+                <div>
+                  <label for="inp-email" class="block text-xs font-semibold text-[#1B2A41] mb-1">Email or Phone *</label>
+                  <input id="inp-email" type="text" required placeholder="e.g., name@example.org" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]" />
+                </div>
+              </div>
+
+              <div>
+                <label for="inp-category" class="block text-xs font-semibold text-[#1B2A41] mb-1">Area of Interest</label>
+                <select id="inp-category" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]">
+                  <option value="Local Volunteer (Bihar)">Local Volunteer Expression of Interest (Bihar)</option>
+                  <option value="School / Community Institution">School or Credible Local Institution Collaboration</option>
+                  <option value="Founding Governance Inquiry">General Foundation Inquiry</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="inp-message" class="block text-xs font-semibold text-[#1B2A41] mb-1">Message *</label>
+                <textarea id="inp-message" rows="3" required placeholder="Share how you would like to connect or support community programmes in Bihar..." class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]"></textarea>
+              </div>
+
+              <div class="flex items-center justify-between gap-4 pt-1">
+                <span class="text-[11px] text-[#526071]">Protected by SSL &amp; backend validation</span>
+                <button type="submit" class="px-5 py-2.5 rounded-lg bg-[#1B2A41] hover:bg-[#142033] text-white text-sm font-medium transition">
+                  Send Inquiry
+                </button>
+              </div>
+            </form>
+
+            <!-- Submission Confirmation Log -->
+            <div id="contact-feedback" class="hidden mt-4 p-4 rounded-xl bg-[#F2ECE1] border-l-4 border-[#D4A359] text-xs text-[#142033]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 2: DEDICATED DONATION PAGE SETUP                                 -->
+  <!-- ===================================================================== -->
+  <div id="view-donate-page" class="hidden flex-1 py-10 lg:py-14 bg-[#FAF8F5]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
+
+      <!-- Compliance & Proposal Stage Guardrail Banner -->
+      <div class="rounded-2xl bg-[#1B2A41] text-white p-5 sm:p-6 border-l-4 border-[#D4A359] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4A359] font-semibold">
+            <span class="w-2 h-2 rounded-full bg-[#D4A359]"></span>
+            Incorporation-Planning Stage · Pre-Launch Donation Setup
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+            This donation portal is pre-wired for Razorpay &amp; UPI via <code>server.js</code>. Per statutory compliance, live payments remain disabled (<code>DONATIONS_ENABLED=false</code>) until Section 8 registration, nonprofit banking, and KYC are finalised.
+          </p>
+        </div>
+        <button type="button" onclick="switchViewMode('site')" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-medium shrink-0 transition">
+          &#8592; Back to Home
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Column: Donation Configuration Form -->
+        <div class="lg:col-span-7 rounded-2xl bg-[#F2ECE1] p-6 sm:p-8 border border-[#E5DEC9] shadow-sm space-y-6">
+          <div>
+            <h1 class="font-serif-display text-2xl sm:text-3xl font-bold text-[#1B2A41]">Support Children in Bihar</h1>
+            <p class="text-xs sm:text-sm text-[#526071] mt-1">Every rupee will be recorded in transparent donation and expenditure ledgers.</p>
+          </div>
+
+          <!-- Frequency Toggle -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">Contribution Frequency</label>
+            <div class="grid grid-cols-2 gap-2 p-1 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9]">
+              <button type="button" id="freq-onetime" onclick="setDonationFrequency('One-Time')" class="py-2 rounded-lg text-xs sm:text-sm font-semibold bg-[#1B2A41] text-white transition">
+                One-Time Contribution
+              </button>
+              <button type="button" id="freq-monthly" onclick="setDonationFrequency('Monthly')" class="py-2 rounded-lg text-xs sm:text-sm font-semibold text-[#1B2A41] hover:bg-[#F2ECE1] transition">
+                Monthly Support
+              </button>
+            </div>
+          </div>
+
+          <!-- Amount Selection -->
+          <div class="space-y-2">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">Select Amount (INR)</label>
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2" id="amount-presets-grid"></div>
+            <div class="mt-2">
+              <input id="donate-custom-amount" type="number" min="100" step="50" value="1000" oninput="onCustomAmountInput(this.value)" placeholder="Enter custom amount (min ₹100)" class="w-full px-3.5 py-2.5 rounded-lg border border-[#E5DEC9] bg-white text-sm font-semibold text-[#1B2A41] focus:outline-none focus:border-[#1B2A41]" />
+            </div>
+          </div>
+
+          <!-- Programme Allocation -->
+          <div class="space-y-2">
+            <label for="donate-program" class="block text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">Allocate Towards Key Area</label>
+            <select id="donate-program" onchange="updateDonationSummary()" class="w-full px-3.5 py-2.5 rounded-lg border border-[#E5DEC9] bg-white text-sm text-[#142033] focus:outline-none focus:border-[#1B2A41]">
+              <option value="Education and scholarships">Education and scholarships</option>
+              <option value="Food and essential-needs assistance">Food and essential-needs assistance</option>
+              <option value="Healthcare and nutrition">Healthcare and nutrition</option>
+              <option value="Child protection and welfare">Child protection and welfare</option>
+              <option value="Community development">Community development</option>
+              <option value="Emergency and humanitarian relief">Emergency and humanitarian relief</option>
+            </select>
+          </div>
+
+          <!-- Donor Info -->
+          <form id="donation-form" onsubmit="handleDonationSubmit(event)" class="space-y-4 pt-2 border-t border-[#E5DEC9]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="donor-name" class="block text-xs font-semibold text-[#1B2A41] mb-1">Full Name *</label>
+                <input id="donor-name" type="text" required placeholder="e.g., Priya Verma" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]" />
+              </div>
+              <div>
+                <label for="donor-email" class="block text-xs font-semibold text-[#1B2A41] mb-1">Email Address *</label>
+                <input id="donor-email" type="email" required placeholder="e.g., priya@example.org" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="donor-phone" class="block text-xs font-semibold text-[#1B2A41] mb-1">Phone (Optional)</label>
+                <input id="donor-phone" type="tel" placeholder="+91 9XXXXXXXXX" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm focus:outline-none focus:border-[#1B2A41]" />
+              </div>
+              <div>
+                <label for="donor-pan" class="block text-xs font-semibold text-[#1B2A41] mb-1">PAN (Optional · Future Records)</label>
+                <input id="donor-pan" type="text" maxlength="10" placeholder="ABCDE1234F" class="w-full px-3.5 py-2 rounded-lg border border-[#E5DEC9] bg-white text-sm uppercase focus:outline-none focus:border-[#1B2A41]" />
+              </div>
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-xl bg-[#1B2A41] hover:bg-[#142033] text-white text-sm font-semibold transition shadow-sm">
+              Simulate Donation Checkout &amp; Receipt Preview
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Column: Live Summary & Receipt Preview -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="rounded-2xl bg-[#FAF8F5] p-6 border border-[#E5DEC9] shadow-sm space-y-4">
+            <div class="text-xs font-semibold uppercase tracking-wider text-[#526071]">Contribution Summary</div>
+            <div class="flex items-baseline justify-between border-b border-[#E5DEC9] pb-3">
+              <span class="text-sm text-[#526071]">Selected Amount</span>
+              <span id="summary-amount-display" class="font-serif-display text-2xl font-bold text-[#1B2A41]">₹1,000</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-[#526071]">Frequency:</span>
+                <span id="summary-freq-display" class="font-semibold text-[#1B2A41]">One-Time</span>
+              </div>
+              <div class="flex justify-between gap-2">
+                <span class="text-[#526071]">Programme:</span>
+                <span id="summary-prog-display" class="font-semibold text-[#1B2A41] text-right">Education and scholarships</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#526071]">Gateway Status:</span>
+                <span id="summary-gateway-status" class="font-semibold text-[#D4A359]">Proposal Stage (Preview)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transparency & Legal Note -->
+          <div class="rounded-2xl bg-[#F2ECE1] p-5 border border-[#E5DEC9] space-y-2 text-xs text-[#526071] leading-relaxed">
+            <div class="font-semibold text-[#1B2A41] uppercase tracking-wider">Transparency &amp; Compliance</div>
+            <p>
+              Epstein Foundation is currently in the incorporation-planning stage in India. No CSR, 80G tax-exemption, or foreign-funding eligibility is claimed at this stage.
+            </p>
+            <p>
+              When deployed with <code>server.js</code>, verified Razorpay orders are logged in SQLite with HMAC-SHA256 signature validation.
+            </p>
+          </div>
+
+          <!-- Generated Preview Receipt Card -->
+          <div id="donation-receipt-preview" class="hidden rounded-2xl bg-[#1B2A41] text-white p-6 border-t-4 border-[#D4A359] space-y-3 shadow-md"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 3: NGO.IND.IN DASHBOARD COPY-PASTE KIT                           -->
+  <!-- ===================================================================== -->
+  <div id="view-copy-kit" class="hidden flex-1 py-10 bg-[#FAF8F5]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-6">
+      <div class="rounded-2xl bg-[#1B2A41] text-white p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-[#D4A359] font-semibold">Ready-to-Publish Content Kit</span>
+          <h2 class="font-serif-display text-2xl font-bold mt-1">Copy-Paste Text for Your ngo.ind.in Dashboard</h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+            Copy any block below into your <strong>ngo.ind.in</strong> profile or link visitors from <code>epsteinfoundation.ngo.ind.in</code> to your hosted full-stack portal.
+          </p>
+        </div>
+        <button type="button" onclick="switchViewMode('site')" class="px-4 py-2 rounded-lg bg-[#D4A359] text-[#142033] text-xs font-semibold shrink-0">
+          &#8592; Back to Website
+        </button>
+      </div>
+
+      <div id="copy-blocks-container" class="grid grid-cols-1 gap-4"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1B2A41] text-white border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
+      <div class="flex items-center gap-3">
+        <img id="footer-logo-img" src="assets/web_logo_crest.jpg" alt="Epstein Foundation Logo" class="w-9 h-9 rounded-lg object-cover border border-[#D4A359]/40" />
+        <div>
+          <div class="font-serif-display font-bold text-white text-sm">EPSTEIN FOUNDATION — “For Children.”</div>
+          <div class="text-[11px] text-slate-300">epsteinfoundation.ngo.ind.in · Independent Humanitarian Initiative (Proposal Stage)</div>
+        </div>
+      </div>
+      <div class="text-center sm:text-right">
+        <div>“Every child deserves a chance. Our responsibility is to help make that chance real.”</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const LOGO_MAP = {
+      crest: "assets/web_logo_crest.jpg",
+      seal: "assets/web_logo_seal.jpg"
+    };
+
+    const HERO_SLIDES = [
+      {
+        img: "assets/web_hero_classroom.jpg",
+        kicker: "INDEPENDENT HUMANITARIAN INITIATIVE · BIHAR, INDIA",
+        tag: "Pillar 01 · Education & Scholarships",
+        caption: "Supporting classroom access, learning materials, and foundational schooling in Bihar."
+      },
+      {
+        img: "assets/web_reading_support.jpg",
+        kicker: "PRACTICAL GRASSROOTS PROGRAMMES · FOR CHILDREN",
+        tag: "Pillar 02 · Community-Led Learning & Dignity",
+        caption: "Working with local volunteers and educators to nurture literacy, safety, and opportunity."
+      },
+      {
+        img: "assets/web_community_aid.jpg",
+        kicker: "TRANSPARENT GOVERNANCE · MEASURABLE OUTCOMES",
+        tag: "Pillar 03 · Essential Needs, Nutrition & Relief",
+        caption: "Delivering practical food, healthcare, and community assistance with strict financial clarity."
+      }
+    ];
+
+    const VISION_PILLARS = [
+      { id: "education", title: "Education", short: "Schooling & scholarships", detail: "Ensuring children in underserved communities have books, uniforms, scholarship support, and encouraging learning spaces." },
+      { id: "healthcare", title: "Healthcare", short: "Health & child nutrition", detail: "Promoting basic paediatric health check-ups, hygiene awareness, and balanced nutritional support for growing children." },
+      { id: "safety", title: "Safety", short: "Child protection & care", detail: "Safeguarding children within secure, supportive learning and community environments free from vulnerability." },
+      { id: "dignity", title: "Dignity", short: "Respectful support", detail: "Delivering every humanitarian programme with empathy, respect, and accountability toward children and families." },
+      { id: "opportunities", title: "Opportunities", short: "Pathways to the future", detail: "Creating fair opportunities for children to learn, thrive, and build a better future starting in Bihar." }
+    ];
+
+    const KEY_AREAS = [
+      { id: 1, category: "learning", title: "Education and scholarships", summary: "Supporting school access, essential learning materials, and scholarship pathways for underserved children.", scope: "Initial focus in Bihar: distributing notebooks and stationery, supporting remedial reading circles, and helping vulnerable students stay enrolled in school." },
+      { id: 2, category: "wellbeing", title: "Food and essential-needs assistance", summary: "Providing staple food supplies and essential daily necessities for vulnerable children and families.", scope: "Initial focus in Bihar: community-verified distribution of staple ration packets and seasonal clothing essentials with full expenditure logs." },
+      { id: 3, category: "wellbeing", title: "Healthcare and nutrition", summary: "Facilitating preventive child health awareness, basic care access, and nutritional support.", scope: "Initial focus in Bihar: partnering with local healthcare professionals for basic child health camps, sanitation awareness, and nutrition packs." },
+      { id: 4, category: "learning", title: "Child protection and welfare", summary: "Safeguarding children's safety, personal dignity, and supportive family and school environments.", scope: "Initial focus in Bihar: promoting child-safe community guidelines, family awareness, and referrals to credible statutory child welfare bodies." },
+      { id: 5, category: "community", title: "Community development", summary: "Strengthening local learning spaces and community-led family resilience in underserved areas.", scope: "Initial focus in Bihar: collaborating with village and ward volunteers to identify genuine local priorities and strengthen neighbourhood learning hubs." },
+      { id: 6, category: "community", title: "Emergency and humanitarian relief", summary: "Delivering timely essential relief to children and families during local crises and seasonal hardships.", scope: "Initial focus in Bihar: rapid, accountable provision of dry rations, clean water kits, and basic supplies during seasonal floods or weather emergencies." }
+    ];
+
+    const INITIAL_APPROACH = [
+      { num: "01", title: "Begin with multiple small humanitarian programmes", desc: "Launch focused, manageable field initiatives in Bihar that address immediate child and community needs." },
+      { num: "02", title: "Identify genuine community needs", desc: "Consult directly with families, teachers, and community members before designing interventions." },
+      { num: "03", title: "Work with local volunteers and credible institutions", desc: "Partner with trusted educators and established local bodies for responsible ground execution." },
+      { num: "04", title: "Maintain transparent donation and expenditure records", desc: "Keep clear, verifiable financial documentation for every rupee received and spent." },
+      { num: "05", title: "Measure beneficiaries reached and programme outcomes", desc: "Track real participation and tangible child welfare outcomes rather than vanity metrics." },
+      { num: "06", title: "Build long-term trust before expanding", desc: "Earn enduring community and stakeholder confidence in Bihar prior to broader expansion." }
+    ];
+
+    const ROADMAP_STAGES = [
+      { step: "01", title: "Finalise founding team and governance", phase: "Incorporation Planning", detail: "Confirm the three founding directors (Chairperson/Strategic, Finance & Compliance, Programmes & Impact) as initial members and adopt the governance charter." },
+      { step: "02", title: "Complete name verification and Section 8 incorporation", phase: "Statutory Registration", detail: "Complete MCA name approval and formal incorporation as an independent Section 8 nonprofit company in India." },
+      { step: "03", title: "Secure a rented registered office in Patna, Bihar", phase: "Headquarters Setup", detail: "Establish the official registered and administrative office in Patna, Bihar for statutory correspondence and coordination." },
+      { step: "04", title: "Establish financial and operational systems", phase: "Internal Controls", detail: "Set up dedicated nonprofit banking, transparent bookkeeping workflows, voucher systems, and programme documentation." },
+      { step: "05", title: "Launch initial humanitarian programmes", phase: "Field Rollout (Bihar)", detail: "Begin small, practical child education, nutrition, and essential-needs programmes across priority communities in Bihar." },
+      { step: "06", title: "Develop partnerships and pursue eligible grants and CSR opportunities", phase: "Institutional Growth", detail: "Engage institutional partners and apply for eligible grants and CSR support once legally registered, compliant, and operational." },
+      { step: "07", title: "Expand nationally, with international work considered when legally authorised and operationally ready", phase: "Long-Term Horizon", detail: "Scale programmes progressively across India and consider international initiatives only when legally authorised and operationally ready." }
+    ];
+
+    const COPY_KIT_BLOCKS = [
+      { id: "copy-org-name", section: "Profile, Logo & Maps -> Organization Name & Tagline", title: "Organization Name & Tagline", content: "EPSTEIN FOUNDATION — For Children.\nAn independent humanitarian foundation focused on children's welfare, dignity and opportunities." },
+      { id: "copy-vision", section: "Profile, Logo & Maps / Web Page Customizer -> Our Vision", title: "Our Vision Statement", content: "A world where every child has access to education, healthcare, safety, dignity and opportunities to build a better future." },
+      { id: "copy-mission", section: "Profile, Logo & Maps / Web Page Customizer -> Our Mission", title: "Our Mission Statement", content: "We aim to support children and vulnerable communities through practical humanitarian initiatives, beginning with small, meaningful programmes in Bihar and expanding progressively." },
+      { id: "copy-areas", section: "Overview (Web Page Customizer) -> Our Key Areas", title: "Our Key Areas (6 Programmes)", content: "1. Education and scholarships\n2. Food and essential-needs assistance\n3. Healthcare and nutrition\n4. Child protection and welfare\n5. Community development\n6. Emergency and humanitarian relief" },
+      { id: "copy-approach", section: "Overview (Web Page Customizer) -> About Us / Our Initial Approach", title: "Our Initial Approach & Governance Note", content: "Epstein Foundation is an independent humanitarian initiative (proposed Section 8 nonprofit company in India, headquartered in Patna, Bihar).\n\n“Every child deserves a chance. Our responsibility is to help make that chance real.”" }
+    ];
+
+    const DONATION_PRESETS = [500, 1000, 2500, 5000, 10000];
+    let currentHeroIdx = 0;
+    let activeVisionPillar = "education";
+    let activeAreaFilter = "all";
+    let expandedAreaIds = { 1: true };
+    let activeRoadmapIdx = 0;
+    let donationFrequency = "One-Time";
+    let donationAmount = 1000;
+
+    function renderHeroSlide() {
+      const slide = HERO_SLIDES[currentHeroIdx];
+      document.getElementById("hero-slide-img").src = slide.img;
+      document.getElementById("hero-kicker").textContent = slide.kicker;
+      document.getElementById("hero-slide-tag").textContent = slide.tag;
+      document.getElementById("hero-slide-caption").textContent = slide.caption;
+      document.getElementById("hero-slide-counter").textContent = "Slide " + (currentHeroIdx + 1) + " of " + HERO_SLIDES.length;
+
+      const dotsContainer = document.getElementById("hero-dots-container");
+      dotsContainer.innerHTML = HERO_SLIDES.map((_, idx) => {
+        const activeClass = idx === currentHeroIdx ? "w-6 bg-[#1B2A41]" : "w-2.5 bg-[#1B2A41]/30";
+        return `<button type="button" onclick="setHeroSlide(${idx})" class="${activeClass} h-2 rounded-full transition" aria-label="Slide ${idx + 1}"></button>`;
+      }).join("");
+    }
+
+    function nextHeroSlide() {
+      currentHeroIdx = (currentHeroIdx + 1) % HERO_SLIDES.length;
+      renderHeroSlide();
+    }
+
+    function prevHeroSlide() {
+      currentHeroIdx = (currentHeroIdx - 1 + HERO_SLIDES.length) % HERO_SLIDES.length;
+      renderHeroSlide();
+    }
+
+    function setHeroSlide(idx) {
+      currentHeroIdx = idx;
+      renderHeroSlide();
+    }
+
+    function switchLogo(kind) {
+      const src = LOGO_MAP[kind] || LOGO_MAP.crest;
+      document.getElementById("header-logo-img").src = src;
+      document.getElementById("footer-logo-img").src = src;
+      const btnCrest = document.getElementById("btn-logo-crest");
+      const btnSeal = document.getElementById("btn-logo-seal");
+      if (kind === "crest") {
+        btnCrest.className = "px-2.5 py-1 rounded-md text-xs font-medium bg-[#D4A359] text-[#142033] transition";
+        btnSeal.className = "px-2.5 py-1 rounded-md text-xs font-medium text-slate-200 hover:text-white transition";
+      } else {
+        btnSeal.className = "px-2.5 py-1 rounded-md text-xs font-medium bg-[#D4A359] text-[#142033] transition";
+        btnCrest.className = "px-2.5 py-1 rounded-md text-xs font-medium text-slate-200 hover:text-white transition";
+      }
+    }
+
+    function switchViewMode(mode) {
+      const siteEl = document.getElementById("view-public-site");
+      const donateEl = document.getElementById("view-donate-page");
+      const copyEl = document.getElementById("view-copy-kit");
+      const btnSite = document.getElementById("btn-mode-site");
+      const btnDonate = document.getElementById("btn-mode-donate");
+      const btnCopy = document.getElementById("btn-mode-copykit");
+
+      siteEl.classList.add("hidden");
+      donateEl.classList.add("hidden");
+      copyEl.classList.add("hidden");
+
+      const offCls = "px-2.5 py-1 rounded-md text-xs font-medium text-slate-200 hover:text-white transition";
+      const onCls = "px-2.5 py-1 rounded-md text-xs font-medium bg-white text-[#142033] transition";
+      btnSite.className = offCls;
+      btnDonate.className = offCls;
+      btnCopy.className = offCls;
+
+      if (mode === "donate") {
+        donateEl.classList.remove("hidden");
+        btnDonate.className = onCls;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (mode === "copykit") {
+        copyEl.classList.remove("hidden");
+        btnCopy.className = onCls;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        siteEl.classList.remove("hidden");
+        btnSite.className = onCls;
+      }
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById("mobile-menu-panel").classList.toggle("hidden");
+    }
+
+    function renderVisionPillars() {
+      const btnContainer = document.getElementById("vision-pillar-buttons");
+      btnContainer.innerHTML = VISION_PILLARS.map((p) => {
+        const isAct = p.id === activeVisionPillar;
+        const cls = isAct
+          ? "bg-[#1B2A41] text-white border-[#1B2A41] shadow-sm"
+          : "bg-[#FAF8F5] text-[#1B2A41] border-[#E5DEC9] hover:border-[#1B2A41]";
+        return `
+          <button type="button" onclick="selectVisionPillar('${p.id}')" class="p-3 rounded-xl border text-left transition ${cls}">
+            <div class="font-serif-display font-bold text-sm">${p.title}</div>
+            <div class="text-[11px] opacity-80 mt-0.5">${p.short}</div>
+          </button>
+        `;
+      }).join("");
+
+      const current = VISION_PILLARS.find((p) => p.id === activeVisionPillar) || VISION_PILLARS[0];
+      document.getElementById("pillar-active-badge").textContent = "Showing: " + current.title;
+      document.getElementById("vision-pillar-detail").innerHTML = `
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#1B2A41]">${current.title} Pillar Focus:</span>
+          <p class="text-sm text-[#142033] mt-0.5">${current.detail}</p>
+        </div>
+        <a href="#key-areas" class="text-xs font-semibold text-[#1B2A41] underline shrink-0">See Key Areas &#8594;</a>
+      `;
+    }
+
+    function selectVisionPillar(id) {
+      activeVisionPillar = id;
+      renderVisionPillars();
+    }
+
+    function renderKeyAreas() {
+      const grid = document.getElementById("key-areas-grid");
+      const filtered = activeAreaFilter === "all"
+        ? KEY_AREAS
+        : KEY_AREAS.filter((item) => item.category === activeAreaFilter);
+
+      grid.innerHTML = filtered.map((item) => {
+        const isOpen = !!expandedAreaIds[item.id];
+        return `
+          <div class="rounded-2xl bg-[#F2ECE1] p-6 border border-[#E5DEC9] flex flex-col justify-between transition hover:shadow-sm">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="w-8 h-8 rounded-full bg-[#1B2A41] text-white text-xs font-bold flex items-center justify-center">0${item.id}</span>
+                <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FAF8F5] text-[#526071]">Core Domain</span>
+              </div>
+              <h3 class="font-serif-display text-lg font-bold text-[#1B2A41]">${item.title}</h3>
+              <p class="text-sm text-[#526071] mt-2 leading-relaxed">${item.summary}</p>
+              ${isOpen ? `<div class="mt-3 p-3 rounded-xl bg-[#FAF8F5] border-l-2 border-[#D4A359] text-xs text-[#142033] leading-relaxed">${item.scope}</div>` : ""}
+            </div>
+            <button type="button" onclick="toggleAreaScope(${item.id})" class="mt-4 pt-3 border-t border-[#E5DEC9] text-left text-xs font-semibold text-[#1B2A41] flex items-center justify-between">
+              <span>${isOpen ? "Hide Initial Bihar Scope" : "View Initial Bihar Scope"}</span>
+              <span>${isOpen ? "&#8722;" : "+"}</span>
+            </button>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function filterKeyAreas(cat) {
+      activeAreaFilter = cat;
+      document.querySelectorAll(".area-filter-btn").forEach((btn) => {
+        btn.className = btn.getAttribute("data-filter") === cat
+          ? "area-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#1B2A41] text-white transition"
+          : "area-filter-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-[#F2ECE1] text-[#1B2A41] hover:bg-[#E5DEC9] transition";
+      });
+      renderKeyAreas();
+    }
+
+    function toggleAreaScope(id) {
+      expandedAreaIds[id] = !expandedAreaIds[id];
+      renderKeyAreas();
+    }
+
+    function switchGovTab(tab) {
+      const govPanel = document.getElementById("panel-governance");
+      const appPanel = document.getElementById("panel-approach");
+      const btnGov = document.getElementById("tab-btn-gov");
+      const btnApp = document.getElementById("tab-btn-approach");
+      if (tab === "approach") {
+        govPanel.classList.add("hidden");
+        appPanel.classList.remove("hidden");
+        btnApp.className = "px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-[#1B2A41] text-white transition";
+        btnGov.className = "px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-[#1B2A41] hover:bg-[#F2ECE1] transition";
+      } else {
+        appPanel.classList.add("hidden");
+        govPanel.classList.remove("hidden");
+        btnGov.className = "px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-[#1B2A41] text-white transition";
+        btnApp.className = "px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-[#1B2A41] hover:bg-[#F2ECE1] transition";
+      }
+    }
+
+    function renderInitialApproach() {
+      document.getElementById("approach-list-container").innerHTML = INITIAL_APPROACH.map((item) => `
+        <div class="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5DEC9] flex items-start gap-3.5">
+          <span class="w-7 h-7 rounded-full bg-[#1B2A41] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">${item.num}</span>
+          <div>
+            <h4 class="font-semibold text-sm text-[#1B2A41]">${item.title}</h4>
+            <p class="text-xs text-[#526071] mt-0.5 leading-relaxed">${item.desc}</p>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderRoadmap() {
+      document.getElementById("roadmap-grid").innerHTML = ROADMAP_STAGES.map((st, idx) => {
+        const isSel = idx === activeRoadmapIdx;
+        const borderCls = isSel
+          ? "border-2 border-[#1B2A41] bg-[#F2ECE1] shadow-sm"
+          : "border border-[#E5DEC9] bg-[#FAF8F5] hover:bg-[#F2ECE1]/60";
+        return `
+          <button type="button" onclick="selectRoadmapStage(${idx})" class="text-left rounded-xl p-4 transition flex flex-col justify-between ${borderCls}">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#526071]">Stage ${st.step}</span>
+                <span class="w-2 h-2 rounded-full ${idx === 0 ? 'bg-[#D4A359]' : 'bg-[#1B2A41]/40'}"></span>
+              </div>
+              <div class="font-semibold text-xs sm:text-sm text-[#1B2A41] leading-snug">${st.title}</div>
+            </div>
+            <div class="mt-3 pt-2 border-t border-[#E5DEC9] text-[11px] text-[#526071] font-medium">${st.phase}</div>
+          </button>
+        `;
+      }).join("");
+
+      const active = ROADMAP_STAGES[activeRoadmapIdx];
+      document.getElementById("roadmap-selected-indicator").textContent = "Inspecting: Stage " + active.step + " of 07";
+      document.getElementById("roadmap-detail-box").innerHTML = `
+        <div class="space-y-1">
+          <div class="text-xs font-bold uppercase tracking-wider text-[#1B2A41]">Stage ${active.step} · ${active.phase}</div>
+          <div class="font-serif-display font-bold text-base sm:text-lg text-[#1B2A41]">${active.title}</div>
+          <p class="text-xs sm:text-sm text-[#526071] leading-relaxed">${active.detail}</p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <button type="button" onclick="selectRoadmapStage(${(activeRoadmapIdx - 1 + ROADMAP_STAGES.length) % ROADMAP_STAGES.length})" class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5DEC9] text-xs font-semibold text-[#1B2A41]">&#8592; Prev</button>
+          <button type="button" onclick="selectRoadmapStage(${(activeRoadmapIdx + 1) % ROADMAP_STAGES.length})" class="px-3 py-1.5 rounded-lg bg-[#1B2A41] text-white text-xs font-semibold">Next Stage &#8594;</button>
+        </div>
+      `;
+    }
+
+    function selectRoadmapStage(idx) {
+      activeRoadmapIdx = idx;
+      renderRoadmap();
+    }
+
+    // Donation Page Logic
+    function renderDonationPresets() {
+      const grid = document.getElementById("amount-presets-grid");
+      grid.innerHTML = DONATION_PRESETS.map((amt) => {
+        const isSel = Number(donationAmount) === amt;
+        const cls = isSel
+          ? "bg-[#1B2A41] text-white border-[#1B2A41]"
+          : "bg-[#FAF8F5] text-[#1B2A41] border-[#E5DEC9] hover:border-[#1B2A41]";
+        return `<button type="button" onclick="selectDonationAmount(${amt})" class="py-2 px-2 rounded-lg border text-xs sm:text-sm font-semibold transition ${cls}">₹${amt.toLocaleString("en-IN")}</button>`;
+      }).join("");
+    }
+
+    function selectDonationAmount(amt) {
+      donationAmount = amt;
+      document.getElementById("donate-custom-amount").value = amt;
+      renderDonationPresets();
+      updateDonationSummary();
+    }
+
+    function onCustomAmountInput(val) {
+      const parsed = parseInt(val, 10);
+      donationAmount = Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+      renderDonationPresets();
+      updateDonationSummary();
+    }
+
+    function setDonationFrequency(freq) {
+      donationFrequency = freq;
+      const b1 = document.getElementById("freq-onetime");
+      const b2 = document.getElementById("freq-monthly");
+      if (freq === "One-Time") {
+        b1.className = "py-2 rounded-lg text-xs sm:text-sm font-semibold bg-[#1B2A41] text-white transition";
+        b2.className = "py-2 rounded-lg text-xs sm:text-sm font-semibold text-[#1B2A41] hover:bg-[#F2ECE1] transition";
+      } else {
+        b2.className = "py-2 rounded-lg text-xs sm:text-sm font-semibold bg-[#1B2A41] text-white transition";
+        b1.className = "py-2 rounded-lg text-xs sm:text-sm font-semibold text-[#1B2A41] hover:bg-[#F2ECE1] transition";
+      }
+      updateDonationSummary();
+    }
+
+    function updateDonationSummary() {
+      const prog = document.getElementById("donate-program").value;
+      document.getElementById("summary-amount-display").textContent = "₹" + (donationAmount || 0).toLocaleString("en-IN");
+      document.getElementById("summary-freq-display").textContent = donationFrequency;
+      document.getElementById("summary-prog-display").textContent = prog;
+    }
+
+    function handleDonationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("donor-name").value.trim();
+      const email = document.getElementById("donor-email").value.trim();
+      const prog = document.getElementById("donate-program").value;
+      const amt = Math.max(100, parseInt(document.getElementById("donate-custom-amount").value || "1000", 10));
+      const receiptId = "EF-PREVIEW-" + String(Date.now()).slice(-6);
+
+      const box = document.getElementById("donation-receipt-preview");
+      box.classList.remove("hidden");
+      box.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="text-[11px] uppercase tracking-widest text-[#D4A359] font-semibold">Preview Receipt (Simulation)</span>
+          <span class="text-[11px] text-slate-300">${receiptId}</span>
+        </div>
+        <div class="font-serif-display text-lg font-bold">₹${amt.toLocaleString("en-IN")} · ${donationFrequency}</div>
+        <div class="text-xs text-slate-200 space-y-1">
+          <div><strong>Supporter:</strong> ${name} (${email})</div>
+          <div><strong>Allocated Area:</strong> ${prog}</div>
+          <div><strong>Status:</strong> Proposal Stage — No payment charged. Live Razorpay checkout activates once <code>DONATIONS_ENABLED=true</code> is set on the backend after Section 8 incorporation.</div>
+        </div>
+      `;
+    }
+
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      const fullName = document.getElementById("inp-name").value.trim();
+      const contact = document.getElementById("inp-email").value.trim();
+      const category = document.getElementById("inp-category").value;
+      const message = document.getElementById("inp-message").value.trim();
+      const box = document.getElementById("contact-feedback");
+      box.classList.remove("hidden");
+      try {
+        const res = await fetch("/api/inquiries", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ fullName, contact, category, message })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Submission failed");
+        box.innerHTML = `<div class="font-semibold text-[#1B2A41]">Inquiry Saved (#${data.id})</div><div class="mt-0.5 text-[#526071]">Thank you, <strong>${fullName}</strong>. Your ${category} message has been recorded in the foundation database.</div>`;
+        document.getElementById("contact-form").reset();
+      } catch (err) {
+        box.innerHTML = `<div class="font-semibold text-[#1B2A41]">Notice</div><div class="mt-0.5 text-[#526071]">${err.message}</div>`;
+      }
+    }
+
+    function renderCopyKit() {
+      document.getElementById("copy-blocks-container").innerHTML = COPY_KIT_BLOCKS.map((b, idx) => `
+        <div class="rounded-xl bg-[#F2ECE1] p-5 border border-[#E5DEC9] space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div class="text-[11px] font-semibold uppercase tracking-wider text-[#526071]">${b.section}</div>
+              <h3 class="font-serif-display font-bold text-base text-[#1B2A41]">${b.title}</h3>
+            </div>
+            <button type="button" id="copy-btn-${idx}" onclick="copyKitBlock(${idx})" class="px-3.5 py-1.5 rounded-lg bg-[#1B2A41] hover:bg-[#142033] text-white text-xs font-medium transition">Copy Text</button>
+          </div>
+          <pre class="p-3.5 rounded-lg bg-[#FAF8F5] border border-[#E5DEC9] text-xs text-[#142033] whitespace-pre-wrap font-sans leading-relaxed">${b.content}</pre>
+        </div>
+      `).join("");
+    }
+
+    function copyKitBlock(idx) {
+      const block = COPY_KIT_BLOCKS[idx];
+      if (!block) return;
+      const btn = document.getElementById("copy-btn-" + idx);
+      const markCopied = () => {
+        btn.textContent = "Copied!";
+        btn.className = "px-3.5 py-1.5 rounded-lg bg-[#D4A359] text-[#142033] text-xs font-semibold transition";
+        setTimeout(() => {
+          btn.textContent = "Copy Text";
+          btn.className = "px-3.5 py-1.5 rounded-lg bg-[#1B2A41] hover:bg-[#142033] text-white text-xs font-medium transition";
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(block.content).then(markCopied).catch(() => fallbackCopy(block.content, markCopied));
+      } else {
+        fallbackCopy(block.content, markCopied);
+      }
+    }
+
+    function fallbackCopy(text, callback) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (err) {}
+      document.body.removeChild(ta);
+      callback();
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      renderHeroSlide();
+      renderVisionPillars();
+      renderKeyAreas();
+      renderInitialApproach();
+      renderRoadmap();
+      renderDonationPresets();
+      updateDonationSummary();
+      renderCopyKit();
+    });
+  </script>
+</body>
+</html>
